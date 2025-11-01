@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - EventEase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login to EventEase</h1>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="yourname@mlrit.ac.in">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+            <div id="error-message" class="error"></div>
+        </form>
+        <div class="toggle-role">
+            <p>Switch to: <a href="#" id="toggleAdmin">Admin Login</a></p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#loginForm').on('submit', function(e) {
+                e.preventDefault();
+                const email = $('#email').val();
+                if (!email.endsWith('@mlrit.ac.in')) {
+                    $('#error-message').text('Please use your MLRIT email address.');
+                    return;
+                }
+                // AJAX call to login.php would go here
+            });
+
+            $('#toggleAdmin').on('click', function(e) {
+                e.preventDefault();
+                // Logic to switch to admin login form
+            });
+        });
+    </script>
+</body>
+</html>

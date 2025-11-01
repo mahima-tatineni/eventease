@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - EventEase</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <div class="admin-dashboard">
+        <header>
+            <h1>Admin Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="create-event-tab">Create Event</a></li>
+                    <li><a href="#" id="view-registrations-tab">View Registrations</a></li>
+                    <li><a href="#" id="mark-attendance-tab">Mark Attendance</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="dashboard-content">
+            <div id="create-event" class="tab-content">
+                <h2>Create New Event</h2>
+                <form id="create-event-form">
+                    <label for="event-title">Event Title:</label>
+                    <input type="text" id="event-title" required>
+                    
+                    <label for="event-date">Event Date:</label>
+                    <input type="date" id="event-date" required>
+                    
+                    <label for="event-description">Description:</label>
+                    <textarea id="event-description" required></textarea>
+                    
+                    <label for="event-venue">Venue:</label>
+                    <input type="text" id="event-venue" required>
+                    
+                    <label for="event-coordinator">Coordinator:</label>
+                    <input type="text" id="event-coordinator" required>
+                    
+                    <button type="submit">Create Event</button>
+                </form>
+            </div>
+
+            <div id="view-registrations" class="tab-content" style="display:none;">
+                <h2>View Registrations</h2>
+                <table id="registrations-table">
+                    <thead>
+                        <tr>
+                            <th>Event Title</th>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Registration data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="mark-attendance" class="tab-content" style="display:none;">
+                <h2>Mark Attendance</h2>
+                <table id="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Event Title</th>
+                            <th>Student Name</th>
+                            <th>Attendance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Attendance data will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

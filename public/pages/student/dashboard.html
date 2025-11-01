@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - EventEase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">🎓 EventEase</div>
+        <ul>
+            <li class="active"><a href="#events">Available Events</a></li>
+            <li><a href="#registered">My Registrations</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="events" class="section active">
+            <h2>Available Events</h2>
+            <div class="events-grid"></div>
+        </div>
+
+        <div id="registered" class="section">
+            <h2>My Registrations</h2>
+            <div class="registered-events"></div>
+        </div>
+
+        <div id="profile" class="section">
+            <h2>My Profile</h2>
+            <div class="profile-info"></div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
