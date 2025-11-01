@@ -5,6 +5,8 @@ const path = require('path');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
 const eventRoutes = require('./routes/events');
+const userRoutes = require('./routes/users');
+const devRoutes = require('./routes/dev');
 
 const app = express();
 
@@ -29,6 +31,8 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/dev', devRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

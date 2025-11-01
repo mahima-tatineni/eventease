@@ -16,7 +16,14 @@ const userSchema = new mongoose.Schema({
         }
     },
     password: { type: String, required: true },
-    role: { type: String, enum: ['student','admin'], default: 'student' }
+    role: { type: String, enum: ['student','admin'], default: 'student' },
+
+    // Extended profile fields
+    department: { type: String, default: '' },
+    year: { type: Number, min: 1, max: 6 },
+    semester: { type: Number, min: 1, max: 12 },
+    rollNumber: { type: String, default: '' },
+    phone: { type: String, default: '' }
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', userSchema);

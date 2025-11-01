@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin - Manage Events</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">🎓 EventEase Admin</div>
+    <ul>
+      <li><a href="/pages/admin/dashboard.html">Create Event</a></li>
+      <li class="active"><a href="/pages/admin/manage.html">Manage Events</a></li>
+      <li><a href="/pages/admin/attendance.html">Attendance</a></li>
+      <li><a href="/" id="logout">Logout</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <div class="panel">
+      <h2 class="h1">Manage Events</h2>
+      <div id="eventsTable"></div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/admin-manage.js"></script>
+</body>
+</html>
